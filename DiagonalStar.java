@@ -4,17 +4,19 @@ public class DiagonalStar {
     }
 
     public static void printSquareStar(int number){
-        int firstRow = 0;
-        int firstCol = 0;
-        int lastRow = 0;
-        int lastCol = 0;
-
-        for (int i = 1; i <= number; i++){
-            firstCol = i;
-            lastCol = number;
-            for (int j = 1; j <= i; j++){
-                System.out.println();
-                System.out.print("*");
+        if (number < 5) {
+            System.out.println("Invalid Value");
+        } else {
+        for (int i = 0; i < number; i++){
+            for (int j = 0; j < number; j++){
+                    if (i == 0 || i == number - 1 || j == 0 || j == number - 1|| j == i || j == number - 1 - i){
+                        System.out.print("*");
+                    }
+                    else {
+                        System.out.print(" ");
+                    }
+            }
+            System.out.println();
             }
         }
     }
